@@ -54,7 +54,7 @@ const Avianca = () => {
       setErros((prevState)=>{
         return {...prevState, age:'Se requiere tu edad'}
       })
-    } else if(email.length<17) {
+    }  else if(email.length<17) {
       errorCount++
       setErros((prevState) => {
         return {...prevState, age:'Tu edad debe ser mayor a 18 años'}
@@ -149,7 +149,7 @@ const Avianca = () => {
                      placeholder='Escribe tu edad (dentro de 18 a 100 años)'
                      min={18}
                      max={100}
-                     pattern="^[0-9]*"
+                     pattern="[0-9]{0,10}"
                      value={age} 
                      onChange={(e) => setAge(e.target.value)}
                      className="inputForm"
