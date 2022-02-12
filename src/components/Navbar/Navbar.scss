@@ -1,0 +1,94 @@
+$bgColor: #34495e;
+$hoverColor: #3498db;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+	height: 75px;
+	background-color: $bgColor;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.home {
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+
+.items {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+        color: $hoverColor;
+    }
+}
+
+.menuIcons {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+    .home{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        text-align: center;
+        background-color: $bgColor;
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        z-index: 99999;
+    }
+
+    .vivair,
+    .avianca,
+    .aeromexico,
+    .emirates {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .menuIcons {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color: $bgColor;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+}
